@@ -12,7 +12,7 @@
 In view of the increased uncertainty in the real estate market over the pandemic of COVID-19, it is more important for investors and customers to avoid uninformed decisions. In this project, we built a machine learning framework to estimate expected value of residential properties in the university district of both UCLA and USC. We developed a set of regressors over tax assessment data and Zillow housing data and identified 5 investment opportunities for each school district. We also explained such results based on a naïve value discovery mechanism. The Stacked Ensemble model and SVR model in our system showed best out-of-sample performance in terms of MAE and MSE respectively. The district of UCLA is a better submarket in term of its higher opportunity density.
 
 <div align=center><img alt="UCLA and USC Community" src="https://user-images.githubusercontent.com/36317616/157133303-5f3b2624-1de8-4f4b-a8b4-e2ebb5c4dfa1.png" />></div>
-<p align="center">UCLA and USC Community</p>
+<p align="center">Fig.1. UCLA and USC Community</p>
 
 ## TASK DESCRIPTION
 1. Explore the major drivers for the value of properties.
@@ -82,3 +82,14 @@ XGB is a tree-based ensemble method optimized to perform efficient and flexible 
 The thinking of Stacked Ensemble here is to use multiple learning algorithms (weak regressors) we built already to build a model with better predictive performance (strong regressor). Indeed, the RF algorithm is an ensemble-based leaner. The method of stacked ensemble tries to find the optimal combination of a collection of prediction algorithms using a process called Stacking or Super Learner. H2O ai has automated most of the steps in this algorithm, so now it is much easier to implement it in data science projects.
 
 ## SUMMARY
+**1. Feature Importance**
+Here we will use our XGB models to depict the global structure of predictors:
+<div align=center><img src="https://user-images.githubusercontent.com/36317616/157133303-5f3b2624-1de8-4f4b-a8b4-e2ebb5c4dfa1.png" />></div>
+<p align="center">Fig.2. Feature importance of XGB model for UCLA</p>
+For the UCLA district, the land value proportion to the total value is the most important numerical drivers, distance to UCLA is the second one.
+
+<div align=center><img src="https://user-images.githubusercontent.com/36317616/157133303-5f3b2624-1de8-4f4b-a8b4-e2ebb5c4dfa1.png" />></div>
+<p align="center">Fig.3. Feature importance of XGB model for USC</p>
+For the USC district, as shown in Fig.3, although land value proportion is relatively important as well, price per unite is the most important factor, distance to the campus is not as important as it for UCLA. For both districts, the typical market price at the time of assessment we introduced from Zillow is one of the top 10 drivers.
+
+**2. Investment Opportunities Discovery**
