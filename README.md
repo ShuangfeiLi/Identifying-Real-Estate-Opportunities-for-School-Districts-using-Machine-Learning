@@ -100,4 +100,8 @@ For the USC district, as shown in Fig.3, although land value proportion is relat
 
 Back to our second purpose, here we identified 5 investment opportunities for each university district based on the suggestion of our best SVR models. We adjusted the estimation of expected value we generated for each property and compare to Zillow's Best Estimate, which represents the market’s signal. If the expected value of one property higher than the market’s current pricing, it would be regarded as an undervalued property thus a potential opportunity.
 
+TABLE II. OPPORTUNITIES DISCOVERY: MODEL EVIDENCE FOR UCLA ($/SQFT)   |  TABLE III. OPPORTUNITIES DISCOVERY: MODEL EVIDENCE FOR UCLA ($/SQFT)
+:-------------------------:|:-------------------------:
+![](https://...Dark.png)  |  ![](https://...Ocean.png)
+
 For the properties listed in Table II and Table III, we believe they are undervalued and have the potential of obtaining a higher price per square feet in the future.
