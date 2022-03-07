@@ -82,7 +82,9 @@ XGB is a tree-based ensemble method optimized to perform efficient and flexible 
 The thinking of Stacked Ensemble here is to use multiple learning algorithms (weak regressors) we built already to build a model with better predictive performance (strong regressor). Indeed, the RF algorithm is an ensemble-based leaner. The method of stacked ensemble tries to find the optimal combination of a collection of prediction algorithms using a process called Stacking or Super Learner. H2O ai has automated most of the steps in this algorithm, so now it is much easier to implement it in data science projects.
 
 ## SUMMARY
+
 **1. Feature Importance**
+
 Here we will use our XGB models to depict the global structure of predictors:
 
 <div align=center><img src="https://raw.githubusercontent.com/ShuangfeiLi/Identifying-Real-Estate-Opportunities-for-School-Districts-using-Machine-Learning/main/img_folder/Feature%20importance%20of%20XGB%20model%20for%20UCLA.png" width="400px"/>></div>
