@@ -1,12 +1,12 @@
 # Rivalry-Beyond-Campus:Identifying-Real-Estate-Opportunities-for-School-Districts-using-Machine-Learning
 
 ## Table of Content
-- [ABSTRACT](#abstract)
-- [TASK DESCRIPTION](#task-description)
-- [MAJOR CHALLENGES AND SOLUTIONS](#major-challenges-and-solutions)
-- [DATA DESCRIPTION](#data-description)
-- [WORKFLOW AND ANALYTIC TECHNIQUES](#workflow-and-analytic-techniques)
-- [SUMMARY](#summary)
+- [Abstract](#abstract)
+- [Task Description](#task-description)
+- [Major Challenges and Solutions](#major-challenges-and-solutions)
+- [Data Description](#data-description)
+- [Modelling](#modelling)
+- [Summary](#summary)
 
 ## ABSTRACT
 In view of the increased uncertainty in the real estate market over the pandemic of COVID-19, it is more important for investors and customers to avoid uninformed decisions. In this project, we built a machine learning framework to estimate expected value of residential properties in the university district of both UCLA and USC. We developed a set of regressors over tax assessment data and Zillow housing data and identified 5 investment opportunities for each school district. We also explained such results based on a naïve value discovery mechanism. The Stacked Ensemble model and SVR model in our system showed best out-of-sample performance in terms of MAE and MSE respectively. The district of UCLA is a better submarket in term of its higher opportunity density.
@@ -34,18 +34,18 @@ The raw datasets include 38 million properties with descriptions for parcels on 
 **Table I. SELECTED FEATURES AND TARGET**
 | Name | Description  |
 | :--: |    :-:   |
-| **Category1 | Location Features** |
+| **Category1** | **Location Features** |
 | zip2 | The 5-digit zip code that matches property’s actual street address |
 | distance_to_ucla | The miles distance away from UCLA  |
 | distance_to_usc | The miles distance away from USC  |
 | PropertyLocation | The actual address of the property (used to match real-time listing price)  |
-| **Category2 | Property Characteristics Features** |
+| **Category2** | **Property Characteristics Features** |
 | Bedrooms | The total number of bedrooms  |
 | Bathroom_per_bedroom | The total number of bathrooms/ total number of bedrooms  |
 | Units | The total number of living units  |
 | YearBuilt | The year property was originally built  |
 | Years_until_effective | The number of years between build year and effective year  |
-| **Category3 | Price Features/Target** |
+| **Category3** | **Price Features/Target** |
 | LandValue_percent | The proportion of a property’s land value to its total value  |
 | Price_per_unit | The total value/ total number of living units  |
 | ZHVI | Zillow Home Value Index, the typical (35th to 65th percentile range) home value of a zip code  |
@@ -54,8 +54,7 @@ The raw datasets include 38 million properties with descriptions for parcels on 
 | … | …  |
 
 
-
-## WORKFLOW AND ANALYTIC TECHNIQUES
+## MODELLING
 vrvrvrv
 
 ## SUMMARY
