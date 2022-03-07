@@ -102,6 +102,6 @@ Back to our second purpose, here we identified 5 investment opportunities for ea
 
 TABLE II. OPPORTUNITIES DISCOVERY: MODEL EVIDENCE FOR UCLA ($/SQFT)   |  TABLE III. OPPORTUNITIES DISCOVERY: MODEL EVIDENCE FOR UCLA ($/SQFT)
 :-------------------------:|:-------------------------:
-![](https://...Dark.png)  |  ![](https://...Ocean.png)
+![](https://github.com/ShuangfeiLi/Identifying-Real-Estate-Opportunities-for-School-Districts-using-Machine-Learning/blob/main/img_folder/MODEL%20EVIDENCE%20FOR%20UCLA.png)  |  ![](https://github.com/ShuangfeiLi/Identifying-Real-Estate-Opportunities-for-School-Districts-using-Machine-Learning/blob/main/img_folder/MODEL%20EVIDENCE%20FOR%20USC.png)
 
 For the properties listed in Table II and Table III, we believe they are undervalued and have the potential of obtaining a higher price per square feet in the future.
