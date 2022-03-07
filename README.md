@@ -27,60 +27,32 @@ Based on the opportunity discovery model proposed above, the next challenge is c
 To address these problems, we choose the tax-based assessor parcels data as our major dataset to estimate the expected value of properties. We believe it would contribute as a good proxy because unreasonable evaluations directly lead to tax loss or crisis of social justice. Besides, we turn to Zillow data to make sense of the market as well. To be specific, we use prices of historical deals to adjust the estimation of 𝑝̅𝑖, and choose real-time listing prices of properties for sale as the proxy of 𝑝𝑖 to make our predictions forward-looking.
 
 ## DATA DESCRIPTION
-The datasets used in this project can be roughly divided into three categories: location data, property characteristics data, and price data. The location data and property characteristics data are obtained from Assessor Parcels Data as part of County of Los Angeles open data, the price data is collected from the same dataset and extra Zillow housing data.
+The datasets used in this project can be roughly divided into three categories: **location data, property characteristics data, and price data**. The location data and property characteristics data are obtained from [Assessor Parcels Data](https://dev.km2.ai/public/parcels_last.csv) as part of County of Los Angeles open data, the price data is collected from the same dataset and extra [Zillow housing](https://www.zillow.com/?utm_content=1471764169|65545421228|kwd-570802407|509015461845|&semQue=null&k_clickid=_kenshoo_clickid_&gclid=Cj0KCQiA95aRBhCsARIsAC2xvfx3PwnD_833nEwyoiwa0D3eCoUd0BemV-Om8vHDwFLjjDIvZy6aIGQaAgY4EALw_wcB) data.
 
 The raw datasets include 38 million properties with descriptions for parcels on the assessor's annual secured assessment rolls from 2006 to 2021. In order to have a good consistency between datasets, we filtered properties by restricting their assessment roll year between 2013 and 2021. Selected features are summarized as Table I.
 
+**Table I. SELECTED FEATURES AND TARGET**
 | Name | Description  |
 | :--: |    :-:   |
-| Location Features |
+| **Category1 | Location Features** |
 | zip2 | The 5-digit zip code that matches property’s actual street address |
+| distance_to_ucla | The miles distance away from UCLA  |
+| distance_to_usc | The miles distance away from USC  |
+| PropertyLocation | The actual address of the property (used to match real-time listing price)  |
+| **Category2 | Property Characteristics Features** |
+| Bedrooms | The total number of bedrooms  |
+| Bathroom_per_bedroom | The total number of bathrooms/ total number of bedrooms  |
+| Units | The total number of living units  |
+| YearBuilt | The year property was originally built  |
+| Years_until_effective | The number of years between build year and effective year  |
+| **Category3 | Price Features/Target** |
+| LandValue_percent | The proportion of a property’s land value to its total value  |
+| Price_per_unit | The total value/ total number of living units  |
+| ZHVI | Zillow Home Value Index, the typical (35th to 65th percentile range) home value of a zip code  |
+| ZHVI_sf | The typical price per square foot for a property: Zillow Home Value Index / the total square footage  |
+| price_sf | The price per square foot for a property (the target of models)  |
+| … | …  |
 
-<table>
-    <caption>TABLE I. SELECTED FEATURES AND TARGET</caption>
-    <tr>
-        <td align="center">Name</td>
-        <td align="center">Description</td>
-    <tr>
-    <tr>
-        <td colspan="2" align="center">Location Features</td>
-    <tr>
-    <tr>
-        <td>zip2</td>
-        <td>The miles distance away from UCLA</td>
-    <tr>  
-    <tr>
-        <td>distance_to_usc</td>
-        <td>The miles distance away from USC</td>
-    <tr>  
-    <tr>
-        <td>PropertyLocation</td>
-        <td>The actual address of the property (used to match real-time listing price)</td>
-    <tr> 
-    <tr>
-        <td colspan="2" align="center">Property Characteristics Features</td>
-    <tr>
-    <tr>
-        <td>Bedrooms</td>
-        <td>The total number of bedrooms</td>
-    <tr>
-    <tr>
-        <td>Bathroom_per_bedroom</td>
-        <td>The total number of bathrooms/ total number of bedrooms</td>
-    <tr>
-    <tr>
-        <td>Units</td>
-        <td>The total number of living units</td>
-    <tr>
-    <tr>
-        <td>YearBuilt</td>
-        <td>The year property was originally built</td>
-    <tr>
-    <tr>
-        <td>Years_until_effective</td>
-        <td>The number of years between build year and effective year</td>
-    <tr>
-</table>
 
 
 ## WORKFLOW AND ANALYTIC TECHNIQUES
